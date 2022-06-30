@@ -6,7 +6,7 @@ A frontend webapp using vue
 
 It's the final project from a Bootcamp for Frontend in Vue. The idea is to develop a fully fleshed webapp using vue and other libraries that we saw along the way. As to provide content, [jsonplaceholder](https://jsonplaceholder.typicode.com/posts) will be used.
 
-## Table of contents
+## Contents
 
 1. [Objective](#objective)
     1. [Technical Goals](#technical-goals)
@@ -25,16 +25,21 @@ It's the final project from a Bootcamp for Frontend in Vue. The idea is to devel
     1. [How to create a new test bench?](#how-to-create-a-new-test-bench)
     1. [How to create a new test?](#how-to-create-a-new-test)
 1. [Usage](#usage)
-    1. [Start](#npm-run-start)
-    1. [Test](#npm-run-test)
-    1. [Build](#npm-run-build)
+    1. [Compiles and hot-reloads for development](#compiles-and-hot-reloads-for-development)
+    1. [Compiles and minifies for production](#compiles-and-minifies-for-production)
+    1. [Run your unit tests](#run-your-unit-tests)
+    1. [Run your end-to-end tests](#run-your-end-to-end-tests)
+    1. [Lints and fixes files](#lints-and-fixes-files)
+    1. [Customize configuration](#customize-configuration)
 1. [Credits](#credits)
 
 ## Objective
+[↑ Back to top](#contents)
 
 The main objective is to develop a webapp using vue. And also to develop a frontend project from start to finish.
 
 ### Technical Goals
+[↑ Back to the section](#objective)
 
 - Use Vue as the main frontend framework, Vue 2 to be specific.
 - Route the pages, for that, we'll use Vue Router.
@@ -44,6 +49,7 @@ The main objective is to develop a webapp using vue. And also to develop a front
 - Use bootstrap or a similar library, tailwind may be an option, but bootstrap is far more popular.
 
 ## Features
+[↑ Back to top](#contents)
 
 - Contact page
 - Posts page
@@ -52,6 +58,7 @@ The main objective is to develop a webapp using vue. And also to develop a front
 - Footer
 
 ## Tech stack
+[↑ Back to top](#contents)
 
 - Vue2 + TypeScript
 - The Vue ecosystem (vuex, VueAxios, vue-router)
@@ -59,37 +66,46 @@ The main objective is to develop a webapp using vue. And also to develop a front
 - Jest + Testing Library
 
 ## Disclaimer!!
+[↑ Back to top](#contents)
 
 I do not own any of the data presented, therefore all the credit goes to it's rightful author [typicode](https://github.com/typicode).
 
 ## How to set it up?
+[↑ Back to top](#contents)
 
 ### Pre-requisites
+[↑ Back to the section](#how-to-set-it-up)
 
 - `node.js` >= 15.x.x compatibility.
 
 ### Install
+[↑ Back to the section](#how-to-set-it-up)
 
 ```bash
 git clone https://github.com/jofaval/gh-btc-vue-final.git
 ```
 
 ### Use
+[↑ Back to the section](#how-to-set-it-up)
 
 For the usage take a look at the [Usage](#usage)
 
 ## How to deploy?
+[↑ Back to top](#contents)
 
 ### Notice
+[↑ Back to the section](#how-to-deploy)
 
 - The `public/` folder must always be the main one to use.
 - If there's any media file that you want to add, use `src/assets/`.
 
 ### Using the CI/CD
+[↑ Back to the section](#how-to-deploy)
 
 Merge the changes to `main`.
 
 ## Testing
+[↑ Back to top](#contents)
 
 All the tests files will end in `.ts`, since we'll be using TypeScript.
 
@@ -97,12 +113,14 @@ All the tests files will end in `.ts`, since we'll be using TypeScript.
 - End to end tests files will end in `.e2e.ts`
 
 ### How to execute all the tests in the system?
+[↑ Back to the section](#testing)
 
 ```bash
 npm test
 ```
 
 ### How to create a new test bench?
+[↑ Back to the section](#testing)
 
 Create a new `describe` call with the `name` and `lambda` function
 
@@ -112,6 +130,7 @@ describe('Customer', () => {
 ```
 
 ### How to create a new test?
+[↑ Back to the section](#testing)
 
 Create a new `it` call with all the asserts you want
 
@@ -124,20 +143,66 @@ describe('Customer', () => {
 ```
 
 ## Usage
+[↑ Back to top](#contents)
 
-### `npm run start`
+Set up the project by executing the following command at root level
+
+```bash
+npm install
+```
+
+### Compiles and hot-reloads for development
+[↑ Back to the section](#usage)
+
+```bash
+npm run serve
+```
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm run test`
+### Compiles and minifies for production
+[↑ Back to the section](#usage)
 
-Runs all the test in the system and returns the information.
-
-### `npm run build`
+```bash
+npm run build
+```
 
 Used to build the solution into an optimized and compressed version
 
+### Run your unit tests
+[↑ Back to the section](#usage)
+
+```bash
+npm run test:unit
+```
+
+Runs all the unit test in the system and returns the information.
+
+### Run your end-to-end tests
+[↑ Back to the section](#usage)
+
+```bash
+npm run test:e2e
+```
+
+Runs all the e2e test in the system and returns the information.
+
+### Lints and fixes files
+[↑ Back to the section](#usage)
+
+```bash
+npm run lint
+```
+
+Lints all of the files so they're quality code
+
+### Customize configuration
+[↑ Back to the section](#usage)
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
 ## Credits
+[↑ Back to top](#contents)
 
 - To typicode for creating the json placeholder page [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts).
 - Geekshubs for the Bootcamp they've created.
