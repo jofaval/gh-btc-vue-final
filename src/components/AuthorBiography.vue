@@ -5,6 +5,16 @@ export default {
   },
 };
 </script>
+
 <template>
-  <p>{{ bio }}</p>
+  <p class="author__biography">{{ bio }}</p>
 </template>
+
+<style scoped>
+.author__biography {
+  text-align: justify;
+  text-align-last: center;
+  font-style: italic;
+  max-width: 250px;
+}
+</style>
