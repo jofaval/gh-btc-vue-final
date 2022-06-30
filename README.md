@@ -47,6 +47,7 @@ The main objective is to develop a webapp using vue. And also to develop a front
 - As to store information in memory, we'll use vuex, a state-management library for vue.
 - Create custom components as we need them along the way.
 - Use bootstrap or a similar library, tailwind may be an option, but bootstrap is far more popular.
+- Use BEM (Block__Element--Modifier)
 
 ## Features
 [↑ Back to top](#contents)
