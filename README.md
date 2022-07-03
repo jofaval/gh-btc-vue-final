@@ -8,11 +8,19 @@ It's the final project from a Bootcamp for Frontend in Vue. The idea is to devel
 
 ## Contents
 
+1. [Documentation](#documentation)
 1. [Objective](#objective)
     1. [Technical Goals](#technical-goals)
 1. [Features](#features)
 1. [Tech stack](#tech-stack)
 1. [Disclaimer!!](#disclaimer)
+1. [Quick tour](#quick-tour)
+    1. [Home](#home)
+    1. [Author](#author)
+    1. [Posts](#posts)
+    1. [Post detail](#post-detail)
+    1. [User](#user)
+    1. [Contact](#contact)
 1. [How to set it up?](#how-to-set-it-up)
     1. [Pre-requisites](#pre-requisites)
     1. [Install](#install)
@@ -32,6 +40,11 @@ It's the final project from a Bootcamp for Frontend in Vue. The idea is to devel
     1. [Lints and fixes files](#lints-and-fixes-files)
     1. [Customize configuration](#customize-configuration)
 1. [Credits](#credits)
+
+## Documentation
+[↑ Back to top](#contents)
+
+For the docs please refer to the `/docs` folder, or with [this link](./docs/README.md).
 
 ## Objective
 [↑ Back to top](#contents)
@@ -70,6 +83,49 @@ The main objective is to develop a webapp using vue. And also to develop a front
 [↑ Back to top](#contents)
 
 I do not own any of the data presented, therefore all the credit goes to it's rightful author [typicode](https://github.com/typicode).
+
+## Quick tour
+
+Just a quick view on what's the application visual feel. I'll use the dark theme as an example since is the one I've worked the most on and it's also the one I like the most, even though the design wasn't the main point of this project.
+
+### Home
+[↑ Back to top](#contents)
+
+Home
+
+![Home](./docs/assets/screenshots/desktop/home.dark.png)
+
+### Author
+[↑ Back to top](#contents)
+
+Author
+![Author](./docs/assets/screenshots/desktop/author.dark.png)
+
+### Posts
+[↑ Back to top](#contents)
+
+Posts
+
+![Posts](./docs/assets/screenshots/desktop/posts.dark.png)
+
+### Post detail
+[↑ Back to top](#contents)
+
+Post detail
+
+![Post detail](./docs/assets/screenshots/desktop/post-detail.dark.png)
+
+### User
+[↑ Back to top](#contents)
+
+User
+
+![User](./docs/assets/screenshots/desktop/user.dark.png)
+
+### Contact
+[↑ Back to top](#contents)
+
+![Contact form filled](./docs/assets/screenshots/desktop/contact-filled.dark.png)
 
 ## How to set it up?
 [↑ Back to top](#contents)
