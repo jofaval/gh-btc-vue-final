@@ -20,6 +20,7 @@ Home
 [↑ Back to top](#contents)
 
 Author
+
 ![Author](./assets/screenshots/phone/author.phone.dark.png)
 
 ## Posts
@@ -53,7 +54,3 @@ Contact form empty
 Contact form with a validation error
 
 ![Contact form with a validation error](./assets/screenshots/phone/contact-error.phone.dark.png)
-
-Contact form filled
-
-![Contact form filled](./assets/screenshots/phone/contact-filled.phone.dark.png)

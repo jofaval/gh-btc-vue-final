@@ -21,7 +21,8 @@ Home
 [↑ Back to top](#contents)
 
 Author
-![Author](./assets/screenshots/desktop/auhor.light.png)
+
+![Author](./assets/screenshots/desktop/author.light.png)
 
 ## Posts
 [↑ Back to top](#contents)

@@ -99,6 +99,7 @@ Home
 [↑ Back to top](#contents)
 
 Author
+
 ![Author](./docs/assets/screenshots/desktop/author.dark.png)
 
 ### Posts
