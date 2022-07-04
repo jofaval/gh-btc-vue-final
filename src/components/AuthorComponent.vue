@@ -1,16 +1,9 @@
-<template>
-  <div class="author">
-    <AuthorProfile />
-    <AuthorBiography
-      bio="Software Engineer with Full Stack experience, currently working as a Frontend Developer."
-    />
-  </div>
-</template>
-
 <script lang="ts">
+// Vendors
 import Vue from "vue";
-import AuthorBiography from "@/components/AuthorBiography.vue";
-import AuthorProfile from "@/components/AuthorProfile.vue";
+// Components
+import AuthorBiography from "./AuthorBiography.vue";
+import AuthorProfile from "./AuthorProfile.vue";
 
 export default Vue.extend({
   name: "AuthorView",
@@ -22,6 +15,15 @@ export default Vue.extend({
   components: { AuthorBiography, AuthorProfile },
 });
 </script>
+
+<template>
+  <div class="author">
+    <AuthorProfile />
+    <AuthorBiography
+      bio="Software Engineer with Full Stack experience, currently working as a Frontend Developer."
+    />
+  </div>
+</template>
 
 <style scoped>
 .author {

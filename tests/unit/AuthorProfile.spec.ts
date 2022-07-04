@@ -1,4 +1,6 @@
+// Vendors
 import { shallowMount } from "@vue/test-utils";
+// Components
 import AuthorProfile from "@/components/AuthorProfile.vue";
 
 describe("AuthorProfile", () => {

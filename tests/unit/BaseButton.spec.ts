@@ -1,4 +1,6 @@
+// Vendors
 import { mount, shallowMount } from "@vue/test-utils";
+// Components
 import BaseButton from "@/components/BaseButton.vue";
 
 describe("BaseButton", () => {

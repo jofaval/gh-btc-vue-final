@@ -1,4 +1,6 @@
+// Vendors
 import { mount } from "@vue/test-utils";
+// Components
 import AuthorComponent from "@/components/AuthorComponent.vue";
 
 describe("AuthorComponent", () => {

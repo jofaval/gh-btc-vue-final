@@ -1,13 +1,16 @@
 <script lang="ts">
-export default {
+// Vendors
+import Vue from "vue";
+
+export default Vue.extend({
   props: {
     bio: { type: String, required: true },
   },
-};
+});
 </script>
 
 <template>
-  <p class="author__biography">{{ bio }}</p>
+  <p class="author__biography mt-3">{{ bio }}</p>
 </template>
 
 <style scoped>

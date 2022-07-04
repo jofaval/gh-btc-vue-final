@@ -7,8 +7,8 @@ describe("PostDetailLink", () => {
   const post = {
     id: 1,
     userId: 1,
-    title: "1",
-    body: "1",
+    title: "Lorem ipsum",
+    body: "dolor sit amet",
   };
 
   it("should render properly", () => {
