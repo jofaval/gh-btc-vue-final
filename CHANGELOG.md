@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Created a home page with it's necessary assets
 - Navbar now has the Vue logo in it used as a home link, only on desktop view
 - Added the pending issues that were already done.
+- Created the home page.
 
 ### Modified
 
@@ -21,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Contact form now has a proper validation system.
 - Finished abstracting the store into modules
 - Added documentation, documented the visual style of the application, once it was polished and finished, the conclusions, reordered the table of contents.
+- Refined the user detail page.
 
 ### Fixed
 
