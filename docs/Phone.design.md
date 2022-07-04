@@ -2,12 +2,12 @@
 
 ## Contents
 
-1. [Home](#-home)
-1. [Author](#-author)
-1. [Posts](#-posts)
-1. [Post detail](#-post-detail)
-1. [User](#-user)
-1. [Contact](#-contact)
+1. [🛖 Home](#-home)
+1. [😎 Author](#-author)
+1. [📰 Posts](#-posts)
+1. [📜 Post detail](#-post-detail)
+1. [🧑 User](#-user)
+1. [📲 Contact](#-contact)
 
 ## 🛖 Home
 [↑ Back to top](#contents)
@@ -23,14 +23,14 @@ Author
 
 ![Author](./assets/screenshots/phone/author.phone.dark.png)
 
-## 📜 Posts
+## 📰 Posts
 [↑ Back to top](#contents)
 
 Posts
 
 ![Posts](./assets/screenshots/phone/posts.phone.dark.png)
 
-## 📰 Post detail
+## 📜 Post detail
 [↑ Back to top](#contents)
 
 Post detail

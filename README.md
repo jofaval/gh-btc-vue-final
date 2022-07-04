@@ -14,8 +14,8 @@
 1. [🔎 Quick tour](#-quick-tour)
     1. [🛖 Home](#-home)
     1. [😎 Author](#-author)
-    1. [📜 Posts](#-posts)
-    1. [📰 Post detail](#-post-detail)
+    1. [📰 Posts](#-posts)
+    1. [📜 Post detail](#-post-detail)
     1. [🧑 User](#-user)
     1. [📲 Contact](#-contact)
 1. [⚙️ How to set it up?](#-how-to-set-it-up)
@@ -114,14 +114,14 @@ Author
 
 ![Author](./docs/assets/screenshots/desktop/author.dark.png)
 
-### 📜 Posts
+### 📰 Posts
 [↑ Back to top](#contents)
 
 Posts
 
 ![Posts](./docs/assets/screenshots/desktop/posts.dark.png)
 
-### 📰 Post detail
+### 📜 Post detail
 [↑ Back to top](#contents)
 
 Post detail
@@ -286,7 +286,7 @@ Some improvements that could be made to either the applicaion or the architectur
 
 ## 🥳 Conclusions
 
-I barely had any sustantial idea of how Vue truly worked, how an beginner -> intermediate webapp in Vue, was made, coming from React there were some habits I had to take off, while there were solutions to problems I was used to. I can see why Vue it's such a strong framework and I'm starting to understand where it's power comes from.
+I barely had any sustantial idea of how Vue truly worked, how a beginner -> intermediate webapp in Vue, was made, coming from React there were some habits I had to take off, while there were solutions to problems I was used to. I can see why Vue it's such a strong framework and I'm starting to understand where it's power comes from.
 
 Single File Components where kind of a shock, but in a good way, the official documentation is marvelous, and it's ecosystem it's truly one of a kind, it can seriously, not only rival React's one, but beat it. But, at the end of the day, they are two different approaches to the same goal, each with it's own pros and cons.
 

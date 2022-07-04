@@ -2,13 +2,13 @@
 
 ## Contents
 
-1. [Home](#-home)
-1. [Author](#-author)
-1. [Posts](#-posts)
-1. [Post detail](#-post-detail)
-1. [User](#-user)
-1. [Navbar search](#-navbar-search)
-1. [Contact](#-contact)
+1. [🛖 Home](#-home)
+1. [😎 Author](#-author)
+1. [📰 Posts](#-posts)
+1. [📜 Post detail](#-post-detail)
+1. [🧑 User](#-user)
+1. [📲 Contact](#-navbar-search)
+1. [🔍 Navbar search](#-contact)
 
 ## 🛖 Home
 [↑ Back to top](#contents)
@@ -24,7 +24,7 @@ Author
 
 ![Author](./assets/screenshots/desktop/author.dark.png)
 
-## 📜 Posts
+## 📰 Posts
 [↑ Back to top](#contents)
 
 Posts
@@ -39,7 +39,7 @@ Posts last
 
 ![Posts last](./assets/screenshots/desktop/posts-last.dark.png)
 
-## 📰 Post detail
+## 📜 Post detail
 [↑ Back to top](#contents)
 
 Post detail
