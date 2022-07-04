@@ -18,7 +18,7 @@ All of the documentation
 
 - [Contact formulary](./Contact.form.md)
 
-## Visual identity
+### Visual identity
 
 - [Dark theme](./Dark.theme.md)
 - [Light theme](./Light.theme.md)

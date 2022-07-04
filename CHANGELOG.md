@@ -12,11 +12,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Modified
 
-- Update the README with improvements such as, CI/CD badges, imporvements to be made, conclusions
+- Update the README with improvements such as, CI/CD badges, imporvements to be made, conclusions.
+- Quite some little tweaks here and there whilst uploading all of my local changes.
+- Updated the CHANGELOG with as much information as possible.
 
 ### Fixed
 
 - Fixed the Github Pages deployment, no public path was specified so the root was the actual public path. Now the path will change on production.
+
+### Achieved
+
+- I've managed to complete the MVP, finally! There're improvements to be made, I'll tackle some of those along the way, but the project is finished.
 
 ## 🤪 2022-07-03
 
