@@ -1,6 +1,8 @@
+// Utilities
+import { compare } from "@/utils/string.utils";
 // Types
-import type { PostType } from "types/post";
-import type { UserType } from "types/user";
+import type { PostType } from "@/types/post";
+import type { UserType } from "@/types/user";
 
 type PlaceholderStateType = {
   posts: PostType[];
@@ -52,6 +54,36 @@ export default {
         (post: PostType) => post.userId === userIdNumber
       );
     },
+    search:
+      (state: PlaceholderStateType) =>
+      (text: string, limit = 3): PlaceholderSearchType => {
+        if (!text) {
+          return { posts: [], users: [] };
+        }
+
+        const { posts, users } = state;
+
+        const matchedPosts = posts
+          .filter(
+            ({ title, body }) =>
+              compare({ first: title, second: text, contains: true }) ||
+              compare({ first: body, second: text, contains: true })
+          )
+          .slice(0, limit) as PostType[];
+
+        const matchedUsers = users
+          .filter(
+            ({ name, username, email }) =>
+              compare({ first: name, second: text, contains: true }) ||
+              compare({ first: username, second: text, contains: true }) ||
+              compare({ first: email, second: text, contains: true })
+          )
+          .slice(0, limit) as UserType[];
+
+        const results = { posts: matchedPosts, users: matchedUsers };
+
+        return results;
+      },
   },
   mutations: {
     loadPosts(state: PlaceholderStateType, posts: PostType[]) {
