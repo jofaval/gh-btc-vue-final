@@ -4,7 +4,6 @@ import Vue from "vue";
 
 export default Vue.extend({
   props: {
-    label: { type: String, default: "Submit" },
     variant: { type: String, default: "primary" },
     disabled: { type: Boolean, default: false },
     disabledText: { type: String, default: "" },
@@ -25,8 +24,8 @@ export default Vue.extend({
       type="submit"
       :variant="`outline-${variant}`"
       :disabled="disabled"
-      >{{ label }}</b-button
-    >
+      ><slot
+    /></b-button>
     <small v-if="display" class="base-button__desc">{{ disabledText }}</small>
   </div>
 </template>
