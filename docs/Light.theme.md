@@ -2,50 +2,50 @@
 
 ## Contents
 
-1. [Home](#home)
-1. [Author](#author)
-1. [Posts](#posts)
-1. [Post detail](#post-detail)
-1. [User](#user)
-1. [Contact](#contact)
-1. [Navbar search](#navbar-search)
+1. [Home](#-home)
+1. [Author](#-author)
+1. [Posts](#-posts)
+1. [Post detail](#-post-detail)
+1. [User](#-user)
+1. [Contact](#-contact)
+1. [Navbar search](#-navbar-search)
 
-## Home
+## 🛖 Home
 [↑ Back to top](#contents)
 
 Home
 
 ![Home](./assets/screenshots/desktop/home.light.png)
 
-## Author
+## 😎 Author
 [↑ Back to top](#contents)
 
 Author
 
 ![Author](./assets/screenshots/desktop/author.light.png)
 
-## Posts
+## 📜 Posts
 [↑ Back to top](#contents)
 
 Posts
 
 ![Posts](./assets/screenshots/desktop/posts.light.png)
 
-## Post detail
+## 📰 Post detail
 [↑ Back to top](#contents)
 
 Post detail
 
 ![Post detail](./assets/screenshots/desktop/post-detail.light.png)
 
-## User
+## 🧑 User
 [↑ Back to top](#contents)
 
 User
 
 ![User](./assets/screenshots/desktop/user.light.png)
 
-## Contact
+## 📲 Contact
 [↑ Back to top](#contents)
 
 Contact form empty
@@ -60,7 +60,7 @@ Contact form filled
 
 ![Contact form filled](./assets/screenshots/desktop/contact-filled.light.png)
 
-## Navbar search
+## 🔍 Navbar search
 [↑ Back to top](#contents)
 
 Navbar search
