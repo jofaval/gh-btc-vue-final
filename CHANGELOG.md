@@ -4,6 +4,20 @@ All the changes made to this project/repository.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 🥹 2022-07-04
+
+### Added
+
+- Adding unit tests for components and utilities alike and manually testing them.
+
+### Modified
+
+- Update the README with improvements such as, CI/CD badges, imporvements to be made, conclusions
+
+### Fixed
+
+- Fixed the Github Pages deployment, no public path was specified so the root was the actual public path. Now the path will change on production.
+
 ## 🤪 2022-07-03
 
 ### Added
@@ -73,6 +87,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - Now the deployment is meant to happend only when the commit is validated (all tests pass).
+- Fixed the new line return, it will now go from `CRLF` to `LF` on the codebase.
 
 ## 🙂 2022-06-30
 
