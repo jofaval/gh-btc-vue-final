@@ -1,13 +1,12 @@
 # JSON placeholder posts #
 
+![Deployment](https://github.com/jofaval/gh-btc-vue-final/actions/workflows/deployment.yml/badge.svg)&nbsp;![Validation](https://github.com/jofaval/gh-btc-vue-final/actions/workflows/validation.yml/badge.svg)
+
 A frontend webapp using vue
-
-## Description
-
-It's the final project from a Bootcamp for Frontend in Vue. The idea is to develop a fully fleshed webapp using vue and other libraries that we saw along the way. As to provide content, [jsonplaceholder](https://jsonplaceholder.typicode.com/posts) will be used.
 
 ## Contents
 
+1. [Description](#description)
 1. [Documentation](#documentation)
 1. [Objective](#objective)
     1. [Technical Goals](#technical-goals)
@@ -39,7 +38,19 @@ It's the final project from a Bootcamp for Frontend in Vue. The idea is to devel
     1. [Run your end-to-end tests](#run-your-end-to-end-tests)
     1. [Lints and fixes files](#lints-and-fixes-files)
     1. [Customize configuration](#customize-configuration)
+1. [Improvements](#improvements)
+1. [Conclusions](#conclusions)
 1. [Credits](#credits)
+
+## Description
+[↑ Back to top](#contents)
+
+It's the final project from a Bootcamp for Frontend in Vue. The idea is to develop a fully fleshed webapp using vue and other libraries that we saw along the way. As to provide content, [jsonplaceholder](https://jsonplaceholder.typicode.com/posts) will be used.
+
+Deployed at [https://jofaval.github.io/gh-btc-vue-final/](https://jofaval.github.io/gh-btc-vue-final/), it's responsive and also supports PWAs.
+Managed using Gtihub Projects (beta), [BTC Geekshubs - Frontend in Vue - 2022/06](https://github.com/users/jofaval/projects/2) using a template ("Features" template) with a couple of tweaks here and there.
+
+The changes are registered at the [CHANGELOG](./CHANGELOG.md), even though is not minute perfect, it's an orientation of the project's progress. I'm pretty sure there's plenty of little details that I've left in the drawer.
 
 ## Documentation
 [↑ Back to top](#contents)
@@ -60,7 +71,7 @@ The main objective is to develop a webapp using vue. And also to develop a front
 - As to store information in memory, we'll use vuex, a state-management library for vue.
 - Create custom components as we need them along the way.
 - Use bootstrap or a similar library, tailwind may be an option, but bootstrap is far more popular.
-- Use BEM (Block__Element--Modifier)
+- Use BEM (Block__Element--Modifier).
 
 ## Features
 [↑ Back to top](#contents)
@@ -258,6 +269,25 @@ Lints all of the files so they're quality code
 [↑ Back to the section](#usage)
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Improvements
+[↑ Back to top](#contents)
+
+Some improvements that could be made to either the applicaion or the architecture that, either by time, or, mostly, level of experience with the stack, won't be developed:
+
+- Searchbar for posts and users. That displays results grouped by posts and users so that the real user can find the match for what they may be looking for
+- Generalize more the components, right now I feel they're to specific, I'd love nothing more than to make them as customizable as possible, but they're fine as they are and it may be overcomplicating the project.
+- Improve the overall visual style and feel with a better ui, and probably UX.
+- Greatly improve the responsive design so that it's as user-friendly as possible.
+- Add internalization, strings are hardcoded and that's not scalable, let alone ready for mutlilanguage.
+- Improve the form validation's user experience.
+- Create components using arrays so that the logic is abstracted as possible.
+
+## Conclusions
+
+I barely had any sustanial idea of how Vue truly worked, how an beginner -> intermediate webapp in Vue, was made, coming from React there were some habits I had to take off, while there were solutions to problems I was used to. I can see why Vue it's such a strong framework and I'm starting to understand where it's power comes from.
+
+Single File Components where kind of a shock, but in a good way, the official documentation is marvelous, and it's ecosystem it's truly one of a kind, it can seriously, not only rival React's one, but beat it. But, at the end of the day, they are two different approaches to the same goal, each with it's own pros and cons.
 
 ## Credits
 [↑ Back to top](#contents)
