@@ -34,17 +34,16 @@ export default Vue.extend({
 
     this.loaded = true;
   },
+  computed: {
+    theme(): string {
+      return store.getters.theme();
+    },
+  },
 });
 </script>
 
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
-  </div>
+  <div id="app" :class="`app ${theme}`"></div>
 </template>
 
 <style>
