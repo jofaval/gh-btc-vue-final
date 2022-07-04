@@ -68,6 +68,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Started integrating BootstrapVue components into the application.
 - Implement theme toggler and the theme base styles (mostly variables).
 - Created a ton of issues with some details I didn't contemplate at the start.
+- Defined the base CSS style of the application, kind of a neuromorphism approachm, but not quite.
 
 ### Fixed
 
