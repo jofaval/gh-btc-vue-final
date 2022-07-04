@@ -1,3 +1,42 @@
+<script lang="ts">
+// Vendors
+import Vue from "vue";
+// Store
+import store from "./store";
+// Services
+import { getPosts } from "./serivces/posts.services";
+import { getUsers } from "./serivces/users.services";
+// Types
+import type { PostType } from "./types/post";
+import type { UserType } from "./types/user";
+
+console.log("App booting up");
+
+export default Vue.extend({
+  data() {
+    return {
+      posts: [] as PostType[],
+      users: [] as UserType[],
+      loaded: false,
+    };
+  },
+  async mounted() {
+    this.posts = await getPosts();
+    store.commit("loadPosts", this.posts);
+
+    this.users = await getUsers();
+    store.commit("loadUsers", this.users);
+
+    console.log("App booted!", {
+      posts: this.posts.length,
+      users: this.users.length,
+    });
+
+    this.loaded = true;
+  },
+});
+</script>
+
 <template>
   <div id="app">
     <nav>
