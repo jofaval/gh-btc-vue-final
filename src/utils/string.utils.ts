@@ -49,7 +49,9 @@ export const compare = ({
 
   // If it's included as a substring, one way or the other
   if (contains) {
-    return parsedFirst.includes(parsedSecond);
+    return (
+      parsedFirst.includes(parsedSecond) || parsedSecond.includes(parsedFirst)
+    );
   }
 
   return parsedFirst === parsedSecond;
