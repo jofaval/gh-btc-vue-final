@@ -2,16 +2,26 @@
 import axios from "axios";
 // Constants
 import servicesConstants from "@/constants/services.constants";
+// Utilities
+import { isResponseSuccess } from "@/utils/service.utils";
 // Types
 import type { PostType } from "@/types/post";
 
 const { BASE_URL, ENDPOINTS } = servicesConstants;
 export const POSTS_URL = `${BASE_URL}${ENDPOINTS.POSTS}`;
 
+/**
+ * Retrieves the posts of the application
+ * @returns All of the posts for the application
+ */
 export const getPosts = async (): Promise<PostType[]> => {
   const response = await axios.get(POSTS_URL);
 
-  return response?.data ?? [];
+  if (isResponseSuccess(response)) {
+    return response.data;
+  }
+
+  return [];
 };
 
 export default POSTS_URL;
