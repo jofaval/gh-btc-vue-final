@@ -1,43 +1,43 @@
-// Constants
-import themeConstants from "@/constants/theme.constants";
 // Utilities
 import { setStorageValue } from "@/utils/browser.utils";
+import { getPreferredTheme, reverseTheme } from "@/utils/theme.utils";
 
-type ThemeStateType = {
+export type ThemeStateType = {
   theme: string;
 };
 
-const revereTheme = (theme: string): string =>
-  theme === themeConstants.THEMES.DARK
-    ? themeConstants.THEMES.LIGHT
-    : themeConstants.THEMES.DARK;
+export const getters = {
+  theme: (state: ThemeStateType) => (): string => state.theme,
+  oppositeTheme: (state: ThemeStateType) => (): string =>
+    reverseTheme(state.theme),
+};
+
+export const mutations = {
+  updateTheme(state: ThemeStateType, theme: string) {
+    state.theme = theme;
+    setStorageValue("preferred-theme", theme);
+  },
+};
+
+export const actions = {
+  toggleTheme({
+    state,
+    commit,
+  }: {
+    state: ThemeStateType;
+    commit: CallableFunction;
+  }) {
+    const theme = reverseTheme(state.theme);
+    commit("updateTheme", theme);
+  },
+};
 
 export default {
   state: {
-    theme: themeConstants.DEFAULT_THEME,
+    theme: getPreferredTheme(),
   },
-  getters: {
-    theme: (state: ThemeStateType) => (): string => state.theme,
-    oppositeTheme: (state: ThemeStateType) => (): string =>
-      revereTheme(state.theme),
-  },
-  mutations: {
-    updateTheme(state: ThemeStateType, theme: string) {
-      state.theme = theme;
-      setStorageValue("preferred-theme", theme);
-    },
-  },
-  actions: {
-    toggleTheme({
-      state,
-      commit,
-    }: {
-      state: ThemeStateType;
-      commit: CallableFunction;
-    }) {
-      const theme = revereTheme(state.theme);
-      commit("updateTheme", theme);
-    },
-  },
+  getters,
+  mutations,
+  actions,
   modules: {},
 };
