@@ -19,8 +19,9 @@ const router = new VueRouter({
 
 router.afterEach((to) => {
   Vue.nextTick(() => {
-    if (!to?.meta?.title) return;
-    changeTitle(capitalize(to.meta.title));
+    if (to?.meta?.title) {
+      changeTitle(capitalize(to.meta.title));
+    }
   });
 });
 
