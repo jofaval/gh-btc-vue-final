@@ -12,45 +12,48 @@ import type { PostType } from "@/types/post";
 import type { UserType } from "@/types/user";
 
 export default Vue.extend({
+  name: "UserView",
   components: { UserComponent },
-  computed: {
-    user(): UserType {
-      return store.getters.userById(this.$route.params.userId);
-    },
-  },
   mounted() {
-    this.posts = store.getters.postsByUser(this.$route.params.userId);
-    changeTitle(this.user.name);
+    this.refresh();
   },
   data() {
-    return { posts: [] as PostType[], show: true };
+    return { posts: [] as PostType[], user: {} as UserType, show: true };
   },
   watch: {
     user() {
-      this.refresh();
-    },
-    post() {
-      this.refresh();
+      this.loadPosts();
     },
     $route() {
       this.refresh();
     },
   },
   methods: {
+    loadUser() {
+      this.user = store.getters.userById(this.$route.params.userId);
+      changeTitle(this.user.name);
+    },
+    loadPosts() {
+      this.posts = store.getters.postsByUser(this.$route.params.userId);
+    },
+    shouldShow() {
+      this.show = Boolean(this.user) && Boolean(this.posts?.length);
+    },
     refresh() {
       this.show = false;
-
-      this.posts = store.getters.postsByUser(this.user.id);
-      changeTitle(this.user.name);
-      this.show = Boolean(this.user) && Boolean(this.posts?.length);
+      this.loadUser();
+      this.loadPosts();
+      this.shouldShow();
     },
   },
 });
 </script>
 
 <template>
-  <div class="page__user m-3">
-    <UserComponent v-if="show" :user="user" :posts="posts" />
+  <div class="page__user m-3" v-if="show">
+    <!-- <div class="__user">{{ user }}</div> -->
+    <!-- <div class="__posts">{{ posts }}</div> -->
+    <UserComponent :user="user" :posts="posts" />
   </div>
 </template>
 

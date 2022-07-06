@@ -11,7 +11,7 @@ export default Vue.extend({
 </script>
 
 <template>
-  <div class="contact w-100 pt-sm-4 rounded">
+  <div class="page__contact w-100 pt-sm-4 rounded">
     <FormularyComponent />
   </div>
 </template>

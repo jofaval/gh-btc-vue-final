@@ -4,6 +4,25 @@ All the changes made to this project/repository.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 2022-07-06
+
+### Added
+
+- Finished the unit testing, 100% of code coverage
+
+### Modified
+
+- Route and store modules (placeholder mostly) so that the tests worked as fine as possible.
+- All of the components now have the required/recomended `name` prop.
+
+### Fixed
+
+- `v-if`s must be above th element you want to hide, some components weren't and that was a big problem, and pain, for the tests so it is now fixed.
+
+### Achieved
+
+- 100% of code coverage, no more unit testing for a while.
+
 ## 2022-07-05
 
 ### Added
