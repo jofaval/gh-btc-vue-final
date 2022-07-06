@@ -4,7 +4,7 @@ All the changes made to this project/repository.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## 2022-07-06
+## 👨‍💻 2022-07-06
 
 ### Added
 
@@ -23,7 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - 100% of code coverage, no more unit testing for a while.
 
-## 2022-07-05
+## 👨‍💻 2022-07-05
 
 ### Added
 
