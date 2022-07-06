@@ -8,8 +8,7 @@
     "test:unit": "vue-cli-service test:unit --coverage",
     "test:e2e": "vue-cli-service test:e2e --coverage",
     "test": "npm run test:unit --coverage && npm run test:e2e --coverage",
-    "lint": "vue-cli-service lint",
-    "get-mocks": "cp ./tests/utils/get-mocks.sh get-mocks.sh && get-mocks.sh && unlink get-mocks.sh"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
