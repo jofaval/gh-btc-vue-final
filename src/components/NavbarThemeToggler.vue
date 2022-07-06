@@ -3,12 +3,12 @@
 import Vue from "vue";
 // Utilities
 import { capitalize } from "@/utils/string.utils";
+import { getPreferredTheme } from "@/utils/theme.utils";
 // Store
 import store from "@/store";
-// Constants
-import themeConstants from "@/constants/theme.constants";
 
 export default Vue.extend({
+  name: "NavbarThemeToggler",
   data() {
     return {
       checked: false,
@@ -36,14 +36,14 @@ export default Vue.extend({
     },
   },
   mounted() {
-    this.checked = store.getters.theme() !== themeConstants.DEFAULT_THEME;
+    this.checked = store.getters.theme() !== getPreferredTheme();
   },
 });
 </script>
 
 <template>
   <div
-    class="theme-toggler__container custom-control custom-switch d-none d-sm-block"
+    class="theme-toggler__container custom-control custom-switch d-none d-md-block"
   >
     <b-form-checkbox
       id="theme-toggler"

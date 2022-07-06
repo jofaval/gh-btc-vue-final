@@ -5,6 +5,7 @@ import Vue from "vue";
 import store from "@/store";
 
 export default Vue.extend({
+  name: "FormularyInput",
   props: {
     type: { type: String, default: "text" },
     label: { type: String, default: "Label" },

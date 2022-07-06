@@ -14,7 +14,6 @@ export default Vue.extend({
   data() {
     return {
       show: true,
-      store,
     };
   },
   methods: {
@@ -50,31 +49,30 @@ export default Vue.extend({
       return store.getters.message;
     },
     disabled(): boolean {
-      return !(store.getters.isFormFilled && store.getters.isFormValid);
+      return !(store.getters.isFormFilled() && store.getters.isFormValid());
     },
     checkFullName(): boolean {
-      return this.fullName?.length < 1 || store.getters.checkFullName;
+      return this.fullName?.length < 1 || store.getters.checkFullName();
     },
     checkEmail(): boolean {
-      return this.email?.length < 1 || store.getters.checkEmail;
+      return this.email?.length < 1 || store.getters.checkEmail();
     },
     checkSubject(): boolean {
-      return this.subject?.length < 1 || store.getters.checkSubject;
+      return this.subject?.length < 1 || store.getters.checkSubject();
     },
     checkMessage(): boolean {
-      return this.message?.length < 1 || store.getters.checkMessage;
+      return this.message?.length < 1 || store.getters.checkMessage();
     },
   },
 });
 </script>
 
 <template>
-  <div class="formulary__container">
+  <div class="formulary__container" v-if="show">
     <b-form
       class="formulary p-sm-5 rounded"
       @submit="onSubmit"
       @reset="onReset"
-      v-if="show"
     >
       <FormularyFieldset legend="Contact information">
         <FormularyInput
@@ -121,10 +119,13 @@ export default Vue.extend({
       </FormularyFieldset>
 
       <div class="formulary__submits mt-3 btn-group w-100">
-        <BaseButton
+        <!-- <BaseButton
           class="formulary__submits__submit"
           :disabled="disabled"
           disabledText="All fields must be filled before submitting, check that the email is properly formatted"
+          >Submit</BaseButton
+        > -->
+        <BaseButton class="formulary__submits__submit" :disabled="disabled"
           >Submit</BaseButton
         >
         <div class="formulary__submits__submit__container btn">

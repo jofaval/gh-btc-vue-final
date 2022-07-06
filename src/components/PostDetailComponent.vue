@@ -5,6 +5,7 @@ import Vue from "vue";
 import UserLink from "./UserLink.vue";
 
 export default Vue.extend({
+  name: "PostDetailComponent",
   props: {
     post: { type: Object, required: true },
     user: { type: Object, required: true },
@@ -32,16 +33,14 @@ export default Vue.extend({
 </script>
 
 <template>
-  <Transition>
-    <div class="post-detail" v-if="show">
-      <h1 class="post-detail__title h1">{{ post.title }}</h1>
-      <h2 class="post-detail__subtitle post-detail__author h5" v-if="user">
-        Created by: <UserLink :user="user" />
-      </h2>
+  <div class="post-detail" v-if="show">
+    <h1 class="post-detail__title h1">{{ post.title }}</h1>
+    <h2 class="post-detail__subtitle post-detail__author h5" v-if="!!user">
+      Created by: <UserLink :user="user" />
+    </h2>
 
-      <p class="post-detail__body">{{ post.body }}</p>
-    </div>
-  </Transition>
+    <p class="post-detail__body">{{ post.body }}</p>
+  </div>
 </template>
 
 <style scoped>

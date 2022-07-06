@@ -2,7 +2,7 @@
 // Vendors
 import Vue from "vue";
 // Components
-import PostsComponentVue from "./PostsComponent.vue";
+import PostsComponent from "./PostsComponent.vue";
 
 // const START_PICTURE_ID = 0;
 // const START_PICTURE_ID = 420;
@@ -14,16 +14,11 @@ export default Vue.extend({
     user: { type: Object, required: true },
     posts: { type: Array, required: true },
   },
-  components: { PostsComponentVue },
+  components: { PostsComponent },
   data() {
     return {
-      show: false,
+      show: true,
     };
-  },
-  mounted() {
-    Vue.nextTick((): void => {
-      this.show = Boolean(this.user?.company?.name);
-    });
   },
   computed: {
     profilePicture(): string {
@@ -38,8 +33,8 @@ export default Vue.extend({
 </script>
 
 <template>
-  <Transition>
-    <div class="user" v-if="show">
+  <div class="user__container" v-if="show">
+    <div class="user">
       <div class="user__profile-picture__container">
         <figure class="user__profile-picture__figure mr-sm-4">
           <img
@@ -100,11 +95,11 @@ export default Vue.extend({
           }}</span>
         </h4>
         <div class="user__posts">
-          <PostsComponentVue :posts="posts" />
+          <PostsComponent :posts="posts" />
         </div>
       </div>
     </div>
-  </Transition>
+  </div>
 </template>
 
 <style scoped>

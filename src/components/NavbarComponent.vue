@@ -14,6 +14,7 @@ const visibleRoutes = ROUTES.filter(({ name }) =>
 );
 
 export default Vue.extend({
+  name: "NavbarComponent",
   data() {
     return { routes: visibleRoutes };
   },

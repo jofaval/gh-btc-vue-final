@@ -16,12 +16,12 @@ export type PlaceholderSearchType = {
 
 export type PlaceholderGettersType = {
   posts: PostType[];
-  postById: any;
+  postById: unknown;
   users: UserType[];
-  userById: any;
-  userByPostId: any;
-  postsByUser: any;
-  search: any;
+  userById: unknown;
+  userByPostId: unknown;
+  postsByUser: unknown;
+  search: unknown;
 };
 
 export const getters = {
@@ -35,12 +35,10 @@ export const getters = {
     const userIdNumber = Number(userId);
     return state.users.find(({ id }) => id === userIdNumber);
   },
-  userByPostId:
-    (state: PlaceholderStateType, _getters: PlaceholderGettersType) =>
-    (postId: number) => {
-      const post = _getters.postById(state)(postId);
-      return _getters.userById(state)(post?.userId);
-    },
+  userByPostId: (state: PlaceholderStateType) => (postId: number) => {
+    const post = state.posts.find(({ id }) => id === postId);
+    return !post ? {} : state.users.find(({ id }) => id === post.userId);
+  },
   postsByUser: (state: PlaceholderStateType) => (userId: number | string) => {
     const userIdNumber = Number(userId);
     return state.posts.filter((post: PostType) => post.userId === userIdNumber);
