@@ -5,7 +5,6 @@ if [ ! -d ./src/services/__mocks__ ]; then
     echo
 fi
 
-
 echo Generating posts mock...
 curl -kLSs https://jsonplaceholder.typicode.com/posts -o ./src/services/__mocks__/posts_2.json
 echo Posts mock generated!
