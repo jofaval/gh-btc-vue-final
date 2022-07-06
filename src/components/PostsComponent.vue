@@ -7,6 +7,7 @@ import type { PostType } from "@/types/post";
 import PostDetailLink from "./PostDetailLink.vue";
 
 export default Vue.extend({
+  name: "PostsComponent",
   props: {
     posts: { type: Array, required: true },
   },

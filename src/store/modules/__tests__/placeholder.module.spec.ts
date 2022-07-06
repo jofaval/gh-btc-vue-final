@@ -7,7 +7,6 @@ import {
 import placeholderModule, {
   getters,
   mutations,
-  PlaceholderGettersType,
   PlaceholderStateType,
 } from "../placeholder.module";
 
@@ -42,12 +41,11 @@ describe("Placeholder Module", () => {
   });
 
   it("should get user by post id", () => {
-    expect(
-      getters.userByPostId(
-        state,
-        getters as unknown as PlaceholderGettersType
-      )(11)
-    ).toEqual(state.users[1]);
+    expect(getters.userByPostId(state)(11)).toEqual(state.users[1]);
+  });
+
+  it("should  fallback if no user by post id was found", () => {
+    expect(getters.userByPostId(state)(-1)).toEqual({});
   });
 
   it("should get posts by user", () => {

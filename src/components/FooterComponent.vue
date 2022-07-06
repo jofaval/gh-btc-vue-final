@@ -17,6 +17,7 @@ const socialMediaLinks: SocialMediaType[] = [
 ];
 
 export default Vue.extend({
+  name: "FooterComponent",
   props: {
     year: { type: String, default: new Date().getFullYear().toString() },
     author: { type: String, default: "jofaval" },

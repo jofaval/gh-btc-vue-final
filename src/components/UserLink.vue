@@ -4,6 +4,7 @@ import Vue from "vue";
 
 // Constants
 export default Vue.extend({
+  name: "UserLink",
   props: {
     user: { type: Object, required: true },
     short: { type: Boolean, default: false },

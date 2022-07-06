@@ -1,4 +1,4 @@
-type RouterType = {
+export type RouterType = {
   /** The name of the route */
   name: string;
   /** The target path */
@@ -6,7 +6,7 @@ type RouterType = {
   /** The component it will load */
   component?: Element;
   /** The route it will redirect to */
-  redirect: string;
+  redirect?: string;
   /** The meta values, such as the title of the document */
-  meta: { title: string };
+  meta?: { title?: string };
 };

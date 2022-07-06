@@ -3,6 +3,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  name: "AuthorBiography",
   props: {
     bio: { type: String, required: true },
   },

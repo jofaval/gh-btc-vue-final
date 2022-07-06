@@ -4,6 +4,7 @@
  * @returns Nothing
  */
 export const changeTitle = (title: string): void => {
+  if (!title) return;
   document.title = title;
 };
 

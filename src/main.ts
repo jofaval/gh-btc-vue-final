@@ -21,8 +21,9 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.use(VueAxios, axios);
 
-new Vue({
+const vueApp = new Vue({
   router,
   store,
   render: (h) => h(App),
-}).$mount("#app");
+});
+vueApp.$mount("#app");

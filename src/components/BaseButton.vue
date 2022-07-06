@@ -3,6 +3,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  name: "BaseButton",
   props: {
     variant: { type: String, default: "primary" },
     disabled: { type: Boolean, default: false },
@@ -11,7 +12,7 @@ export default Vue.extend({
   computed: {
     display(): boolean {
       // Disabled for this project's purpose, for the moment being
-      return this.disabled && !!this.disabledText && false;
+      return this.disabled && !!this.disabledText;
     },
   },
 });

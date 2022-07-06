@@ -5,6 +5,7 @@ import * as browserUtils from "@/utils/browser.utils";
 import * as stringUtils from "@/utils/string.utils";
 // Router
 import router from "../index";
+import { routeChangeTitle } from "../router";
 // Mocks
 const mockGetStorageValue = jest.fn();
 jest.mock("@/utils/browser.utils");
@@ -94,5 +95,14 @@ describe("Router", () => {
     await Vue.nextTick();
     expect(stringUtils.capitalize).toHaveBeenCalledWith("Contact form");
     expect(browserUtils.changeTitle).toHaveBeenCalledWith("Contact form");
+  });
+
+  it("should not change the title without an existant and valid meta title prop", async () => {
+    routeChangeTitle();
+    routeChangeTitle({ path: "/home", name: "Posts", meta: { title: "" } });
+    routeChangeTitle({ path: "/home", name: "Posts", meta: {} });
+
+    expect(stringUtils.capitalize).not.toHaveBeenCalled();
+    expect(browserUtils.changeTitle).not.toHaveBeenCalled();
   });
 });

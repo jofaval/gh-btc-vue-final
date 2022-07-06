@@ -3,6 +3,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  name: "FormularyFieldset",
   props: {
     legend: { type: String, required: true },
   },

@@ -3,6 +3,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  name: "PostDetailLink",
   props: {
     post: { type: Object, required: true },
     short: { type: Boolean, default: false },
