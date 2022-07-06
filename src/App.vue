@@ -8,19 +8,17 @@ import NavbarComponent from "./components/NavbarComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 import AppLoaderComponent from "./components/AppLoaderComponent.vue";
 // Services
-import { getPosts } from "./serivces/posts.services";
-import { getUsers } from "./serivces/users.services";
+import { getPosts } from "./services/posts.services";
+import { getUsers } from "./services/users.services";
 // Types
 import type { PostType } from "./types/post";
 import type { UserType } from "./types/user";
 
-console.log("App booting up");
+// console.log("App booting up");
 
 export default Vue.extend({
+  name: "AppComponent",
   components: { NavbarComponent, FooterComponent, AppLoaderComponent },
-  // props: {
-  //   theme: { type: String, default: themeConstants.DEFAULT_THEME },
-  // },
   data() {
     return {
       posts: [] as PostType[],
@@ -29,6 +27,8 @@ export default Vue.extend({
     };
   },
   async mounted() {
+    console.log("App booting up");
+
     this.posts = await getPosts();
     store.commit("loadPosts", this.posts);
 

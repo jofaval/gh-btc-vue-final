@@ -9,7 +9,7 @@ export default Vue.extend({
 </script>
 
 <template>
-  <div class="home w-100 h-100 py-3">
+  <div class="page__home w-100 h-100 py-3">
     <b-row class="home__logos text-center">
       <div class="home__logo__container col-md m-auto">
         <img

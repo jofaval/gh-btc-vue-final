@@ -14,26 +14,40 @@ import type { UserType } from "@/types/user";
 export default Vue.extend({
   name: "PostDetailView",
   components: { PostDetailComponent },
-  computed: {
-    post(): PostType {
-      const post = store.getters.postById(this.$route.params.postId);
-      return post;
-    },
-    show(): boolean {
-      return Boolean(this.post) && Boolean(this.user);
-    },
-  },
   data() {
-    return { user: {} as UserType };
+    return { post: {} as PostType, user: {} as UserType, show: false };
   },
   mounted() {
-    this.user = store.getters.userByPostId(this.$route.params.postId);
-    changeTitle(this.post.title);
+    this.refresh();
   },
   watch: {
-    post(post) {
-      this.user = store.getters.userByPostId(post.id);
-      changeTitle(post.title);
+    post() {
+      this.refresh();
+    },
+  },
+  methods: {
+    loadUser() {
+      this.user = store.getters.userByPostId(this.$route.params.postId);
+    },
+    loadPost() {
+      this.post = store.getters.postById(this.$route.params.postId);
+    },
+    shouldShow() {
+      this.show = Boolean(this.post) && Boolean(this.user);
+    },
+    refresh() {
+      console.log("monta aquí y verás madrid", this.post, this.user);
+
+      this.show = false;
+      this.loadUser();
+      this.loadPost();
+      changeTitle(this.post.title);
+      this.shouldShow();
+      console.log(
+        "monta aquí y verás madrid",
+        JSON.stringify(this.post),
+        JSON.stringify(this.user)
+      );
     },
   },
 });
