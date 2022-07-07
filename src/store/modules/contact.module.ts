@@ -44,13 +44,11 @@ export const getters = {
     state.form.message.length >= 1,
   isFormValid:
     (state: ContactStateType, _getters: ContactGettersType) => (): boolean => {
-      const { checkFullName, checkEmail, checkSubject, checkMessage } =
-        _getters;
-      return (
-        checkFullName(state)() &&
-        checkEmail(state)() &&
-        checkSubject(state)() &&
-        checkMessage(state)()
+      return Boolean(
+        _getters.checkFullName(state) &&
+          _getters.checkEmail(state) &&
+          _getters.checkSubject(state) &&
+          _getters.checkMessage(state)
       );
     },
   form: (state: ContactStateType): ContactFormType => state.form,

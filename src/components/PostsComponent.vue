@@ -55,7 +55,7 @@ export default Vue.extend({
       <b-card
         v-for="(post, index) in currentPageElements"
         :key="index"
-        class="shadow-sm border-0"
+        class="posts__post shadow-sm border-0"
       >
         <PostDetailLink :post="post" />
       </b-card>

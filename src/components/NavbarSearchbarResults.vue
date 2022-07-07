@@ -31,12 +31,13 @@ export default Vue.extend({
       >
         <p class="navbar__searchbar__results__posts__title h6">Posts</p>
         <div class="navbar__searchbar__results__posts">
-          <PostDetailLink
+          <div
+            class="navbar__searchbar__results__post"
             v-for="(post, index) in results.posts"
             :key="index"
-            :post="post"
-            :short="true"
-          />
+          >
+            <PostDetailLink :post="post" :short="true" />
+          </div>
         </div>
       </div>
       <div

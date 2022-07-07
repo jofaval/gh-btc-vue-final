@@ -4,5 +4,5 @@ export default {
   POSTS: "/posts",
   POST_DETAILS: "/posts/:postId",
   CONTACT: "/contact",
-  USER: "/user/:userId",
+  USER: "/users/:userId",
 };

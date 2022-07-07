@@ -4,6 +4,20 @@ All the changes made to this project/repository.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 👨‍💻 2022-07-07
+
+### Added
+
+- Implemented e2e tests with real connections to the API to be as close to production as possible.
+
+### Fixed
+
+- As with the unit testing, along the way I discovered some bugs that I quickly fixed, thus, proving the effectiveness of a well tested codebase.
+
+### Achieved
+
+- All testing for this project should be, finally, complete :).
+
 ## 👨‍💻 2022-07-06
 
 ### Added

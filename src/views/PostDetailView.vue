@@ -22,6 +22,9 @@ export default Vue.extend({
   },
   watch: {
     post() {
+      this.loadUser();
+    },
+    $route() {
       this.refresh();
     },
   },
@@ -31,23 +34,16 @@ export default Vue.extend({
     },
     loadPost() {
       this.post = store.getters.postById(this.$route.params.postId);
+      changeTitle(this.post.title);
     },
     shouldShow() {
-      this.show = Boolean(this.post) && Boolean(this.user);
+      this.show = Boolean(this.post?.id) && Boolean(this.user?.id);
     },
     refresh() {
-      console.log("monta aquí y verás madrid", this.post, this.user);
-
       this.show = false;
-      this.loadUser();
       this.loadPost();
-      changeTitle(this.post.title);
+      this.loadUser();
       this.shouldShow();
-      console.log(
-        "monta aquí y verás madrid",
-        JSON.stringify(this.post),
-        JSON.stringify(this.user)
-      );
     },
   },
 });

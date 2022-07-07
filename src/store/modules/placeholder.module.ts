@@ -35,8 +35,9 @@ export const getters = {
     const userIdNumber = Number(userId);
     return state.users.find(({ id }) => id === userIdNumber);
   },
-  userByPostId: (state: PlaceholderStateType) => (postId: number) => {
-    const post = state.posts.find(({ id }) => id === postId);
+  userByPostId: (state: PlaceholderStateType) => (postId: number | string) => {
+    const postIdNumber = Number(postId);
+    const post = state.posts.find(({ id }) => id === postIdNumber);
     return !post ? {} : state.users.find(({ id }) => id === post.userId);
   },
   postsByUser: (state: PlaceholderStateType) => (userId: number | string) => {
