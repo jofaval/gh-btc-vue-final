@@ -5,10 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit --coverage",
-    "test:e2e": "vue-cli-service test:e2e --coverage",
-    "test": "npm run test:unit --coverage && npm run test:e2e --coverage",
-    "lint": "vue-cli-service lint"
+    "test:unit": "vue-cli-service test:unit --coverage --silent",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:e2e-dev": "vue-cli-service test:e2e --config baseUrl=http://locahost:8080/",
+    "test": "npm run test:unit && npm run test:e2e",
+    "lint": "vue-cli-service lint",
+    "cypress:open": "cypress open --config baseUrl='http://locahost:8080/'",
+    "cypress:run": "cypress run --config baseUrl='http://locahost:8080/'"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
