@@ -10,9 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Implemented e2e tests with real connections to the API to be as close to production as possible.
 
+### Modified
+
+- Updated the project's documentation as to properly reflect it's final state.
+
 ### Fixed
 
 - As with the unit testing, along the way I discovered some bugs that I quickly fixed, thus, proving the effectiveness of a well tested codebase.
+- Fixed cypress testing and Github Actios e2e validation, it now uses the vue cli, which is what should've been working since the start.
 
 ### Achieved
 
