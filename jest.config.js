@@ -28,7 +28,7 @@ module.exports = {
     "src/registerServiceWorker.ts",
     "src/plugins/",
     "src/services/__mocks__/",
-    "src/components/NavarSearchbarResultItem.vue",
+    "src/components/NavbarSearchbarResultItem.vue",
     "src/main.ts",
   ],
 };
