@@ -82,7 +82,7 @@ describe("Router", () => {
   });
 
   it("should compute users's route", async () => {
-    await router.replace("/user/1");
+    await router.replace("/users/1");
     await Vue.nextTick();
     expect(stringUtils.capitalize).not.toHaveBeenCalled();
     expect(browserUtils.changeTitle).not.toHaveBeenCalledWith();

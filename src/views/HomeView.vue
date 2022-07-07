@@ -34,7 +34,10 @@ export default Vue.extend({
           <li>Use Vue as the main frontend framework, Vue 2 to be specific.</li>
           <li>Route the pages, for that, we'll use Vue Router.</li>
           <li>Use axios to fetch information, VueAxios if possible.</li>
-          <li>As to store information in memory, we'll use vuex, a state</li>
+          <li>
+            As to store information in memory, we'll use vuex, a
+            state-management library for vue.
+          </li>
           <li>Create custom components as we need them along the way.</li>
           <li>
             Use bootstrap or a similar library, tailwind may be an option, but

@@ -24,6 +24,7 @@ export default Vue.extend({
       posts: [] as PostType[],
       users: [] as UserType[],
       loaded: false,
+      error: false,
     };
   },
   async mounted() {
@@ -41,6 +42,10 @@ export default Vue.extend({
     });
 
     this.loaded = true;
+  },
+  errorCaptured() {
+    // err, vm, info
+    this.error = true;
   },
   computed: {
     theme(): string {
