@@ -14,6 +14,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 // App
 import App from "./App.vue";
+// Utilities
+import { dLog } from "./utils/global.utils";
 
 Vue.config.productionTip = false;
 
@@ -25,5 +27,9 @@ const vueApp = new Vue({
   router,
   store,
   render: (h) => h(App),
+  errorCaptured(err, vm, info) {
+    const message = "An unhandled general error happend in the application";
+    dLog(message, err, vm, info);
+  },
 });
 vueApp.$mount("#app");
