@@ -4,8 +4,8 @@ import Vue from "vue";
 // Store
 import store from "./store";
 // Components
-import NavbarComponent from "./components/NavbarComponent.vue";
-import FooterComponent from "./components/FooterComponent.vue";
+import ErrorBoundary from "./components/ErrorBoundary.vue";
+import AppWrapper from "./AppWrapper.vue";
 import AppLoaderComponent from "./components/AppLoaderComponent.vue";
 // Services
 import { getPosts } from "./services/posts.services";
@@ -20,7 +20,11 @@ import { dLog } from "./utils/global.utils";
 
 export default Vue.extend({
   name: "AppComponent",
-  components: { NavbarComponent, FooterComponent, AppLoaderComponent },
+  components: {
+    AppLoaderComponent,
+    ErrorBoundary,
+    AppWrapper,
+  },
   data() {
     return {
       posts: [] as PostType[],
@@ -58,20 +62,17 @@ export default Vue.extend({
 </script>
 
 <template>
-  <div id="app" :class="`app ${theme}`">
-    <Transition name="fade">
-      <div class="app__content" v-if="loaded">
-        <NavbarComponent />
-        <b-container class="app__container p-3">
-          <Transition name="slide-fade">
-            <router-view />
-          </Transition>
-        </b-container>
-        <FooterComponent />
-      </div>
-      <AppLoaderComponent v-else />
-    </Transition>
-  </div>
+  <ErrorBoundary
+    errorMessage="This got out of control, try refreshing the page and if still doesn't work, open us a ticket :)."
+    cssClass="app__error-boundary"
+  >
+    <div id="app" :class="`app ${theme}`">
+      <Transition name="fade">
+        <AppWrapper v-if="loaded" />
+        <AppLoaderComponent v-else />
+      </Transition>
+    </div>
+  </ErrorBoundary>
 </template>
 
 <style>
@@ -82,24 +83,6 @@ export default Vue.extend({
   display: flex;
   justify-content: start;
   align-items: stretch;
-  flex-direction: column;
-}
-
-.app__content {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 80px 1fr 80px;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.app__container {
-  /* height: 82.5vh; */
-  /* max-height: 82.5vh; */
-  overflow-y: auto;
-  display: flex;
-  justify-content: start;
-  align-items: center;
   flex-direction: column;
 }
 </style>
