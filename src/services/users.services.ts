@@ -1,9 +1,7 @@
-// Vendors
-import axios from "axios";
 // Constants
 import servicesConstants from "@/constants/services.constants";
 // Utilities
-import { isResponseSuccess } from "@/utils/service.utils";
+import { get, isResponseSuccess } from "@/utils/service.utils";
 // Types
 import type { UserType } from "@/types/user";
 
@@ -15,7 +13,7 @@ export const USERS_URL = `${BASE_URL}${ENDPOINTS.USERS}`;
  * @returns All of the users for the application
  */
 export const getUsers = async (): Promise<UserType[]> => {
-  const response = await axios.get(USERS_URL);
+  const response = await get(USERS_URL);
 
   if (isResponseSuccess(response)) {
     return response.data;

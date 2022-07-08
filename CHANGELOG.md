@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Console logs are now restricted on the production environment.
+- Error boundary, since there was no error handling at all, thanks to some feedback. 
+- Services now have error handlers via an utility
 
 ### Modified
 
