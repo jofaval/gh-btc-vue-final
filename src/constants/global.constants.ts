@@ -1,5 +1,5 @@
 export default {
   ENV: {
-    PRODUCTION: "PRODUCTION",
+    PRODUCTION: "production",
   },
 };
