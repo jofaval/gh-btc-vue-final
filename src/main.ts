@@ -23,6 +23,11 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.use(VueAxios, axios);
 
+// General global handler
+window.onerror = (message, source, line, column, error): void => {
+  dLog("window error", { message, source, line, column, error });
+};
+
 const vueApp = new Vue({
   router,
   store,

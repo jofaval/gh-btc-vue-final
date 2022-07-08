@@ -27,7 +27,7 @@ describe("0. Initial assertions", () => {
       .then(() => {
         sendResponse();
         cy.get(".loader").should("not.exist");
-        cy.get(".app__container").should("be.visible");
+        cy.get(".app__wrapper").should("be.visible");
       });
   });
 

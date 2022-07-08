@@ -18,14 +18,15 @@ export default Vue.extend({
   data() {
     return {
       /** Was there an error inside the nested components? */
-      error: false,
+      hasError: false,
     };
   },
   errorCaptured(err, vm, info) {
-    dLog("An unhadled error happened", err, vm, info);
-    this.error = true;
+    dLog("An unhandled error happened", err, vm, info);
+    // eslint-disable-next-line
+    vm.$data.hasError = true;
 
-    return this.shouldPropagate;
+    return vm.$data.shouldPropagate;
   },
 });
 </script>
