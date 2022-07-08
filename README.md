@@ -80,15 +80,15 @@ The main objective is to develop a webapp using vue. And also to develop a front
 ## ✨ Features
 [⬆ Back to top](#contents)
 
-- Contact page
+- **Contact page**
   - A contact formulary that allows the user to contact us. It's validated in real time for a better user experience.
-- Posts page
+- **Posts page**
   - A page to visualize all of the posts and visualize them individually. It also allows for user (the post's author) visualization and to see which posts they wrote.
-- Author page
+- **Author page**
   - The author of the application, a little description about me.
-- Navigation layout
+- **Navigation layout**
   - A navbar from where we can go everywhere we want in the app.
-- Footer
+- **Footer**
   - A layout with the copyrights and some social media links.
 
 The improvements are touched upon later on, [🧐 Improvements](#-improvements).
