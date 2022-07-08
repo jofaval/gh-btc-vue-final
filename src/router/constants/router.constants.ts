@@ -42,8 +42,16 @@ export default {
       // meta: { title: "User detail" },
     },
     {
+      path: pathsConstants.GITHUB_PAGES,
+      redirect: pathsConstants.HOME,
+    },
+    {
+      path: `${pathsConstants.GITHUB_PAGES}/:queryParams(.*)`,
+      redirect: pathsConstants.HOME,
+    },
+    {
       path: "*",
-      redirect: "/home",
+      redirect: pathsConstants.HOME,
     },
   ],
 };

@@ -19,7 +19,7 @@ describe("Router constants", () => {
   });
 
   it("checks that all the expected routes exists", () => {
-    expect(routerConstants.ROUTES.length).toBe(7);
+    expect(routerConstants.ROUTES.length).toBe(9);
     const routes = ["Home", "Author", "Posts", "Detail", "Contact", "User"];
     routes.map((route) => {
       const realRoute = routerConstants.ROUTES.find(

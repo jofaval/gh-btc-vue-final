@@ -4,6 +4,16 @@ All the changes made to this project/repository.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## :raising_hand: 2022-07-08
+
+### Added
+
+- Console logs are now restricted on the production environment.
+
+### Modified
+
+- Routes now use constants as much as possible, and acknowledge the Github Pages route.
+
 ## 👨‍💻 2022-07-07
 
 ### Added

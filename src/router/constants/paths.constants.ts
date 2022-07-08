@@ -5,4 +5,5 @@ export default {
   POST_DETAILS: "/posts/:postId",
   CONTACT: "/contact",
   USER: "/users/:userId",
+  GITHUB_PAGES: "/gh-btc-vue-final",
 };
