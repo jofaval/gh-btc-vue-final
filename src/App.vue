@@ -13,8 +13,10 @@ import { getUsers } from "./services/users.services";
 // Types
 import type { PostType } from "./types/post";
 import type { UserType } from "./types/user";
+// Utilities
+import { dLog } from "./utils/global.utils";
 
-// console.log("App booting up");
+// dLog("App booting up");
 
 export default Vue.extend({
   name: "AppComponent",
@@ -28,7 +30,7 @@ export default Vue.extend({
     };
   },
   async mounted() {
-    console.log("App booting up");
+    dLog("App booting up");
 
     this.posts = await getPosts();
     store.commit("loadPosts", this.posts);
@@ -36,7 +38,7 @@ export default Vue.extend({
     this.users = await getUsers();
     store.commit("loadUsers", this.users);
 
-    console.log("App booted!", {
+    dLog("App booted!", {
       posts: this.posts.length,
       users: this.users.length,
     });

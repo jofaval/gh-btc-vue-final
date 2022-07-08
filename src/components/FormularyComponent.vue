@@ -3,6 +3,8 @@
 import Vue from "vue";
 // Store
 import store from "@/store";
+// Utilities
+import { dLog } from "@/utils/global.utils";
 // Components
 import FormularyInput from "./FormularyInput.vue";
 import BaseButton from "./BaseButton.vue";
@@ -19,10 +21,7 @@ export default Vue.extend({
   methods: {
     onSubmit(event: Event) {
       event.preventDefault();
-      console.log(
-        "Contact form submitted!",
-        JSON.stringify(store.getters.form)
-      );
+      dLog("Contact form submitted!", JSON.stringify(store.getters.form));
     },
     onReset(event: Event) {
       event.preventDefault();
