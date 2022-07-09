@@ -4,6 +4,12 @@ All the changes made to this project/repository.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 😓 2022-07-10
+
+### Fixed
+
+- Transitions on the main page not working after the refactor
+
 ## :raising_hand: 2022-07-08
 
 ### Added
