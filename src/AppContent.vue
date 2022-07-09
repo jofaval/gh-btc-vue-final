@@ -76,5 +76,7 @@ export default Vue.extend({
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+  max-height: 0vh;
+  overflow: hidden;
 }
 </style>
